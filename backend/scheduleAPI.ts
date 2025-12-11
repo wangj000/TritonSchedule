@@ -18,10 +18,12 @@ async function run() {
   const initResp = await fetch(searchUrl);
   const cookies = extractCookies(initResp);
 
+  console.log(`Generating new session cookie: ${cookies}`);
+
   // Request Body
   const body = new URLSearchParams({
     selectedTerm: "WI26",
-    courses: "cse",
+    courses: "math",
     tabNum: "tabs-crs",
   });
 
